@@ -1,0 +1,6 @@
+#ifndef ADRESAT_H_INCLUDED
+#define ADRESAT_H_INCLUDED
+
+
+
+#endif // ADRESAT_H_INCLUDED
