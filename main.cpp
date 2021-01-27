@@ -4,18 +4,14 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
     char wybor;
 
-    while (true)
-    {
-        if (ksiazkaAdresowa.czyUzytkownikJestZalogowany() != true)
-        {
+    while (true) {
+        if (ksiazkaAdresowa.czyUzytkownikJestZalogowany() != true) {
             wybor = MetodyPomocnicze::wybierzOpcjeZMenuGlownego();
-            switch (wybor)
-            {
+            switch (wybor) {
             case '1':
                 ksiazkaAdresowa.rejestracjaUzytkownika();
                 break;
@@ -30,36 +26,29 @@ int main()
                 system("pause");
                 break;
             }
-        }
-        else
-        {
+        } else {
             wybor = MetodyPomocnicze::wybierzOpcjeZMenuUzytkownika();
-            switch (wybor)
-            {
+            switch (wybor) {
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
-               //idOstatniegoAdresata = dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
                 break;
             case '2':
-                //wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                //wyszukajAdresatowPoNazwisku(adresaci);
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-                //wyswietlWszystkichAdresatow(adresaci);
                 break;
             case '5':
-                //idUsunietegoAdresata = usunAdresata(adresaci);
-                //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-                //edytujAdresata(adresaci);
+                ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-                //zmianaHaslaZalogowanegoUzytkownika(uzytkownicy, idZalogowanegoUzytkownika);
                 break;
             case '8':
                 ksiazkaAdresowa.wylogowanieUzytkownika();
